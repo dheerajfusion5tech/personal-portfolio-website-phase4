@@ -1,0 +1,119 @@
+.gitignore
+bun.lock
+index.html
+LICENSE
+package.json
+project-notes.md
+README.md
+structure.txt
+tsconfig.json
+vite.config.ts
+
+.tanstack
+Folder PATH listing
+Volume serial number is 7478-274D
+C:\USERS\ADMIN\DOWNLOADS\VS-CODE\KT-JULY-MONTH\PERSONAL-PORTFOLIO-WEBSITE-PHASE4\.TANSTACK
+\---tmp
+src
+Folder PATH listing
+Volume serial number is 7478-274D
+C:\USERS\ADMIN\DOWNLOADS\VS-CODE\KT-JULY-MONTH\PERSONAL-PORTFOLIO-WEBSITE-PHASE4\SRC
+|   index.css
+|   main.tsx
+|   router.tsx
+|   routeTree.gen.ts
+|   styles.css
+|   
++---components
+|   +---layout
+|   |       AppShell.tsx
+|   |       Footer.tsx
+|   |       Header.tsx
+|   |       ThemeProvider.tsx
+|   |       
+|   +---shared
+|   |       CopyToast.tsx
+|   |       Magnetic.tsx
+|   |       StaggerText.tsx
+|   |       TiltCard.tsx
+|   |       
+|   \---ui
+|           button.tsx
+|           
++---features
+|   +---blog
+|   |   +---components
+|   |   |       ArticleRow.tsx
+|   |   |       
+|   |   +---constants
+|   |   |       posts.ts
+|   |   |       
+|   |   \---pages
+|   |           BlogPage.tsx
+|   |           
+|   +---contact
+|   |   +---components
+|   |   |       ConsoleForm.tsx
+|   |   |       ContactCard.tsx
+|   |   |       
+|   |   \---pages
+|   |           ContactPage.tsx
+|   |           
+|   +---home
+|   |   |   data.ts
+|   |   |   
+|   |   +---components
+|   |   |       CapabilityGrid.tsx
+|   |   |       Hero.tsx
+|   |   |       IndexRail.tsx
+|   |   |       Marquee.tsx
+|   |   |       PreviewCard.tsx
+|   |   |       
+|   |   +---constants
+|   |   |       index.ts
+|   |   |       
+|   |   \---pages
+|   |           HomePage.tsx
+|   |           
+|   +---portfolio
+|   |   +---components
+|   |   |       ProjectCard.tsx
+|   |   |       ProjectDrawer.tsx
+|   |   |       
+|   |   +---constants
+|   |   |       projects.ts
+|   |   |       
+|   |   \---pages
+|   |           PortfolioPage.tsx
+|   |           
+|   +---project-notes
+|   |   +---constants
+|   |   |       content.ts
+|   |   |       
+|   |   \---pages
+|   |           ProjectNotesPage.tsx
+|   |           
+|   \---resume
+|       +---components
+|       |       ProfileCard.tsx
+|       |       SkillOrbs.tsx
+|       |       Timeline.tsx
+|       |       
+|       +---constants
+|       |       timeline.ts
+|       |       
+|       \---pages
+|               ResumePage.tsx
+|               
++---lib
+|       utils.ts
+|       
+\---routes
+        blog.tsx
+        contact.tsx
+        index.tsx
+        portfolio.tsx
+        project-notes.tsx
+        resume.tsx
+        __root.tsx
+        

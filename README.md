@@ -28,11 +28,17 @@ Premium, radical, production-quality frontend-only portfolio built with TanStack
 ## Setup
 ```bash
 bun install
-# tsc --noEmit
 bun run typecheck 
-# http://personal-portfolio-website.localhost:5173/
 bun run dev 
 bun run build
+```
+in one line
+```
+bun install; bun run typecheck; bun run dev
+```
+scenario
+```
+bun run typecheck; bun run dev
 ```
 
 ## Vite Config Quality
