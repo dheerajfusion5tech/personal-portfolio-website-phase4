@@ -1,6 +1,0 @@
-[build]
-  command = "bun run build"
-  publish = "dist/client"
-
-[[plugins]]
-  package = "@netlify/vite-plugin-tanstack-start"
