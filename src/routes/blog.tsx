@@ -1,0 +1,2 @@
+import { BlogPage } from "@/features/blog/pages/BlogPage"
+export default function BlogRoute() { return <BlogPage /> }

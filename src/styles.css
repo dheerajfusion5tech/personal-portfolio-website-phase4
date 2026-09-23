@@ -1,0 +1,6 @@
+@import url("https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap");
+@import "./index.css";
+@import "tailwindcss";
+
+/* Fallback base if tokens fail */
+html, body { min-height: 100%; }

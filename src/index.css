@@ -1,0 +1,158 @@
+/* Centralized Tokens — ONLY place where CSS variables are defined */
+:root {
+  /* Colors — Light */
+  --paper: #FFFEFB;
+  --paper-2: #F7F5F1;
+  --paper-3: #FFFFFF;
+  --ink: #0A0A0A;
+  --ink-2: #2A2A2A;
+  --ink-3: #5A5A5A;
+  --muted: #8A8A8A;
+  --muted-2: #C8C5BE;
+  --muted-3: #E8E6E1;
+  --line: #E8E6E1;
+  --line-2: #D6D3CC;
+  --line-3: #B8B5AE;
+  --surface: #FFFFFF;
+  --surface-2: #F9F7F3;
+  --surface-3: #F0EDE8;
+  --accent: #D6FF5C;
+  --accent-2: #C2F030;
+  --accent-3: #E8FF8C;
+  --accent-fg: #0A0A0A;
+  --success: #0A7A42;
+  --success-bg: #E8F5E9;
+
+  /* Spacing */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --space-7: 28px;
+  --space-8: 32px;
+  --space-10: 40px;
+  --space-12: 48px;
+  --space-14: 56px;
+  --space-16: 64px;
+  --space-20: 80px;
+  --space-24: 96px;
+
+  /* Layout */
+  --header-h: 64px;
+  --content-max: 1600px;
+  --content-narrow: 1100px;
+  --sidebar-w: 280px;
+
+  /* Radius */
+  --radius-sm: 10px;
+  --radius: 16px;
+  --radius-md: 16px;
+  --radius-lg: 24px;
+  --radius-xl: 32px;
+  --radius-full: 9999px;
+
+  /* Typography */
+  --font-sans: "Geist", sans-serif;
+  --font-serif: "Instrument Serif", serif;
+  --font-mono: ui-monospace, SFMono-Regular, monospace;
+  --text-xs: 11px;
+  --text-sm: 12px;
+  --text-base: 14px;
+  --text-md: 15px;
+  --text-lg: 18px;
+  --text-xl: 20px;
+  --text-2xl: 24px;
+  --text-3xl: 32px;
+  --text-4xl: 48px;
+  --text-5xl: 56px;
+  --text-6xl: 84px;
+
+  /* Shadows */
+  --shadow-soft: 0 8px 40px rgba(0,0,0,0.06);
+  --shadow-medium: 0 16px 60px rgba(0,0,0,0.10);
+  --shadow-large: 0 24px 80px rgba(0,0,0,0.14);
+
+  /* Motion */
+  --ease-premium: cubic-bezier(0.77, 0, 0.175, 1);
+  --ease-spring: cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.dark {
+  --paper: #0A0A0A;
+  --paper-2: #151515;
+  --paper-3: #1A1A1A;
+  --ink: #FFFEFB;
+  --ink-2: #E8E6E1;
+  --ink-3: #B8B5AE;
+  --muted: #9A9A9A;
+  --muted-2: #3A3A3A;
+  --muted-3: #232323;
+  --line: #232323;
+  --line-2: #333333;
+  --line-3: #444444;
+  --surface: #141414;
+  --surface-2: #1A1A1A;
+  --surface-3: #222222;
+  --accent: #E8FF8C;
+  --accent-2: #D6FF5C;
+  --accent-3: #F0FFB0;
+  --accent-fg: #0A0A0A;
+  --success: #4ADE80;
+  --success-bg: #052E16;
+  --shadow-soft: 0 8px 40px rgba(0,0,0,0.4);
+  --shadow-medium: 0 16px 60px rgba(0,0,0,0.6);
+  --shadow-large: 0 24px 80px rgba(0,0,0,0.8);
+}
+
+/* Global base */
+* { border-color: var(--line); }
+html { scroll-behavior: smooth; }
+body {
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+::selection { background: var(--accent); color: var(--accent-fg); }
+
+/* Utility helpers — global only */
+.mono { font-family: var(--font-mono); }
+.serif { font-family: var(--font-serif); }
+
+/* ReactBits + cali.so micro animations — global keyframes only */
+@keyframes staggerIn {
+  from { transform: translateY(100%); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+@keyframes pulseDot {
+  0%,100% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.6); opacity: 0.6; }
+}
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+@keyframes shimmer {
+  0% { transform: translateX(-100%) rotate(20deg); }
+  100% { transform: translateX(100%) rotate(20deg); }
+}
+.shiny-btn { position: relative; overflow: hidden; }
+.shiny-btn::after {
+  content: "";
+  position: absolute;
+  inset: -50%;
+  background: linear-gradient(120deg, transparent, rgba(255,255,255,0.4), transparent);
+  transform: translateX(-100%) rotate(20deg);
+  transition: transform 0.8s var(--ease-premium);
+}
+.shiny-btn:hover::after { transform: translateX(100%) rotate(20deg); }
+.magnetic { transition: transform 0.2s var(--ease-spring); }
+.tilt-card { transition: transform 0.4s var(--ease-spring), box-shadow 0.4s var(--ease-spring); }
+.tilt-card:hover { transform: perspective(1000px) rotateY(-4deg) rotateX(2deg) translateY(-4px); box-shadow: var(--shadow-medium); }
+.reveal-line { overflow: hidden; }
+.reveal-line span { display: inline-block; animation: staggerIn 0.8s var(--ease-premium) forwards; transform: translateY(100%); }
+.scrollbar-hide { -ms-overflow-style: none; scrollbar-width: none; }
+.scrollbar-hide::-webkit-scrollbar { display: none; }
